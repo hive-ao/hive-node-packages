@@ -1,0 +1,70 @@
+{
+  "name": "sonarqube",
+  "title": "SonarQube",
+  "brand": "sonarqube",
+  "description": "SonarQube 프로젝트·품질 게이트 조회",
+  "mcp": {
+    "repo": "hive-ao/go-mcp-server",
+    "asset": "sonarqube-mcp-{os}-{arch}",
+    "binary": "sonarqube-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/go-sonar-cli",
+    "asset": "sonar-cli-{os}-{arch}",
+    "binary": "sonar-cli"
+  },
+  "cli_bin_env": "SONARQUBE_MCP_CLI_BIN",
+  "configure": {
+    "method": "yaml",
+    "fields": [
+      {
+        "key": "url",
+        "label": "주소",
+        "kind": "text",
+        "required": true,
+        "help": "예: https://sonar.example.com (Cloud면 https://sonarcloud.io)"
+      },
+      {
+        "key": "token",
+        "label": "사용자 토큰",
+        "kind": "secret",
+        "required": true,
+        "help": "My Account › Security에서 발급"
+      },
+      {
+        "key": "type",
+        "label": "종류(선택)",
+        "kind": "choice",
+        "help": "비우면 주소로 판별한다",
+        "choices": [
+          "server",
+          "cloud"
+        ]
+      },
+      {
+        "key": "organization",
+        "label": "조직 키(Cloud는 필수)",
+        "kind": "text"
+      }
+    ],
+    "yaml": {
+      "path": "~/.sonar-cli/config.yaml",
+      "template": "default:\n  url: {url}\n  token: {token}\n  type: {type}\n  organization: {organization}\n"
+    },
+    "note": "sonar-cli config init은 토큰을 프로세스 인자로 받아 목록에 노출되므로, 설정 파일을 직접 쓴다."
+  },
+  "verify": {
+    "args": [
+      "project",
+      "list",
+      "--limit",
+      "1",
+      "--agent",
+      "--json"
+    ],
+    "auth_exit_codes": [
+      2
+    ]
+  },
+  "guide": "SonarQube 주소와 My Account › Security에서 만든 사용자 토큰(Cloud면 조직 키도)."
+}

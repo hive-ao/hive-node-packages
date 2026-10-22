@@ -1,0 +1,68 @@
+{
+  "name": "cloudflare",
+  "title": "Cloudflare",
+  "brand": "cloudflare",
+  "description": "Cloudflare 존·DNS·Workers·Pages 조회",
+  "mcp": {
+    "repo": "hive-ao/go-mcp-server",
+    "asset": "cloudflare-mcp-{os}-{arch}",
+    "binary": "cloudflare-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/go-cloudflare-cli",
+    "asset": "cloudflare-cli-{os}-{arch}",
+    "binary": "cloudflare-cli"
+  },
+  "cli_bin_env": "CLOUDFLARE_MCP_CLI_BIN",
+  "configure": {
+    "method": "init",
+    "profiles": true,
+    "config": "~/.cloudflare-cli/config.yaml",
+    "fields": [
+      {
+        "key": "api_token",
+        "label": "API 토큰",
+        "kind": "secret",
+        "required": true,
+        "help": "Zone Read, DNS Read(수정까지면 Edit), Workers Scripts Read, Pages Read 권한",
+        "env": "CLOUDFLARE_CLI_API_TOKEN"
+      },
+      {
+        "key": "account_id",
+        "label": "계정 ID(선택)",
+        "kind": "text",
+        "help": "비우면 토큰이 보는 계정이 하나일 때 자동으로 잡힌다"
+      }
+    ],
+    "init": {
+      "args": [
+        "config",
+        "init"
+      ],
+      "optional_args": {
+        "account_id": [
+          "--account-id",
+          "{account_id}"
+        ]
+      },
+      "env": {
+        "CLOUDFLARE_CLI_API_TOKEN": "api_token"
+      }
+    },
+    "note": "토큰은 플래그로 받지 않는다 — 환경 변수로 넘겨 프로세스 목록에 남기지 않는다."
+  },
+  "verify": {
+    "args": [
+      "zone",
+      "list",
+      "--limit",
+      "1",
+      "--agent",
+      "--json"
+    ],
+    "auth_exit_codes": [
+      2
+    ]
+  },
+  "guide": "Cloudflare My Profile › API Tokens에서 Custom token을 만든다(Zone Read, DNS Read[·Edit], Workers Scripts Read, Pages Read). 계정 ID는 선택."
+}

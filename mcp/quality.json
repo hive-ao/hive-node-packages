@@ -1,0 +1,22 @@
+{
+  "name": "quality",
+  "title": "Code Quality",
+  "brand": "",
+  "description": "프로젝트 테스트 커버리지 보고서 조회",
+  "mcp": {
+    "repo": "hive-ao/go-mcp-server",
+    "asset": "quality-mcp-{os}-{arch}",
+    "binary": "quality-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/go-quality-cli",
+    "asset": "quality-cli-{os}-{arch}",
+    "binary": "quality-cli"
+  },
+  "cli_bin_env": "QUALITY_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 것이 없다 — PATH에 git이 있어야 한다."
+  },
+  "guide": "준비물이 없다. 프로젝트에서 커버리지 보고서를 먼저 만들어 두면 된다."
+}

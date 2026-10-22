@@ -1,0 +1,30 @@
+{
+  "name": "git",
+  "title": "Git",
+  "brand": "git",
+  "description": "이 PC의 git 저장소 조회·작업",
+  "mcp": {
+    "repo": "hive-ao/go-mcp-server",
+    "asset": "git-mcp-{os}-{arch}",
+    "binary": "git-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/go-git-cli",
+    "asset": "git-cli-{os}-{arch}",
+    "binary": "git-cli"
+  },
+  "cli_bin_env": "GIT_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 자격증명이 없다 — 이 PC의 git 인증(SSH 키·credential helper)을 그대로 쓴다."
+  },
+  "verify": {
+    "args": [
+      "repo",
+      "list",
+      "--agent",
+      "--json"
+    ]
+  },
+  "guide": "준비물이 없다. 이 PC의 git 인증(SSH 키 등)이 이미 되어 있으면 된다. 저장소 등록은 git-cli repo add <경로>."
+}

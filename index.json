@@ -1,0 +1,65 @@
+{
+  "packages": [
+    {
+      "id": "mariadb-sql",
+      "name": "MariaDB SQL",
+      "stage": "cd",
+      "version": "0.1.0",
+      "cli": "mariadb-cli"
+    }
+  ],
+  "mcp": [
+    {
+      "name": "aws",
+      "title": "AWS"
+    },
+    {
+      "name": "cloudflare",
+      "title": "Cloudflare"
+    },
+    {
+      "name": "dooray",
+      "title": "Dooray"
+    },
+    {
+      "name": "ga4",
+      "title": "Google Analytics(GA4)"
+    },
+    {
+      "name": "git",
+      "title": "Git"
+    },
+    {
+      "name": "github",
+      "title": "GitHub"
+    },
+    {
+      "name": "gitlab",
+      "title": "GitLab"
+    },
+    {
+      "name": "grafana",
+      "title": "Grafana"
+    },
+    {
+      "name": "kafka",
+      "title": "Kafka"
+    },
+    {
+      "name": "quality",
+      "title": "Code Quality"
+    },
+    {
+      "name": "slack",
+      "title": "Slack"
+    },
+    {
+      "name": "sonarqube",
+      "title": "SonarQube"
+    },
+    {
+      "name": "youtube",
+      "title": "YouTube"
+    }
+  ]
+}

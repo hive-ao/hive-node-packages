@@ -1,0 +1,44 @@
+{
+  "name": "slack",
+  "title": "Slack",
+  "brand": "slack",
+  "description": "Slack 채널·메시지 조회와 전송",
+  "mcp": {
+    "repo": "hive-ao/go-mcp-server",
+    "asset": "slack-mcp-{os}-{arch}",
+    "binary": "slack-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/go-slack-cli",
+    "asset": "slack-cli-{os}-{arch}",
+    "binary": "slack-cli"
+  },
+  "cli_bin_env": "SLACK_MCP_CLI_BIN",
+  "configure": {
+    "method": "yaml",
+    "fields": [
+      {
+        "key": "bot_token",
+        "label": "봇 토큰",
+        "kind": "secret",
+        "required": true,
+        "help": "xoxb-로 시작"
+      }
+    ],
+    "yaml": {
+      "path": "~/.slack-cli/config.yaml",
+      "template": "default:\n  bot_token: {bot_token}\n"
+    },
+    "note": "slack-cli config init은 토큰을 프로세스 인자로 받아 목록에 노출되므로, 설정 파일을 직접 쓴다."
+  },
+  "verify": {
+    "args": [
+      "channel",
+      "list",
+      "--agent",
+      "--json"
+    ],
+    "auth_message": "invalid_auth"
+  },
+  "guide": "Slack 앱을 만들어 봇 스코프(chat:write, channels:read, groups:read, channels:history, groups:history, users:read, im:write)를 넣고 설치해 얻은 xoxb- 토큰. 비공개 채널에는 봇을 초대해야 한다."
+}
