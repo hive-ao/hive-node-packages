@@ -11,55 +11,68 @@
   "mcp": [
     {
       "name": "aws",
-      "title": "AWS"
+      "title": "AWS",
+      "version": 1
     },
     {
       "name": "cloudflare",
-      "title": "Cloudflare"
+      "title": "Cloudflare",
+      "version": 1
     },
     {
       "name": "dooray",
-      "title": "Dooray"
+      "title": "Dooray",
+      "version": 1
     },
     {
       "name": "ga4",
-      "title": "Google Analytics(GA4)"
+      "title": "Google Analytics(GA4)",
+      "version": 1
     },
     {
       "name": "git",
-      "title": "Git"
+      "title": "Git",
+      "version": 1
     },
     {
       "name": "github",
-      "title": "GitHub"
+      "title": "GitHub",
+      "version": 1
     },
     {
       "name": "gitlab",
-      "title": "GitLab"
+      "title": "GitLab",
+      "version": 1
     },
     {
       "name": "grafana",
-      "title": "Grafana"
+      "title": "Grafana",
+      "version": 1
     },
     {
       "name": "kafka",
-      "title": "Kafka"
+      "title": "Kafka",
+      "version": 1
     },
     {
       "name": "quality",
-      "title": "Code Quality"
+      "title": "Code Quality",
+      "version": 1
     },
     {
       "name": "slack",
-      "title": "Slack"
+      "title": "Slack",
+      "version": 1
     },
     {
       "name": "sonarqube",
-      "title": "SonarQube"
+      "title": "SonarQube",
+      "version": 1
     },
     {
       "name": "youtube",
-      "title": "YouTube"
+      "title": "YouTube",
+      "version": 1
     }
   ]
 }

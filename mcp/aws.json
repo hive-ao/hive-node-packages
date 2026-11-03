@@ -3,14 +3,17 @@
   "title": "AWS",
   "brand": "amazonwebservices",
   "description": "AWS 리소스 읽기 전용 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "aws-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "aws-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-aws-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "aws-ro-cli-{os}-{arch}",
+    "tag_prefix": "aws-cli/",
     "binary": "aws-ro-cli"
   },
   "cli_bin_env": "AWS_MCP_CLI_BIN",

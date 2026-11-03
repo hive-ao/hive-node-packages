@@ -3,14 +3,17 @@
   "title": "Slack",
   "brand": "slack",
   "description": "Slack 채널·메시지 조회와 전송",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "slack-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "slack-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-slack-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "slack-cli-{os}-{arch}",
+    "tag_prefix": "slack-cli/",
     "binary": "slack-cli"
   },
   "cli_bin_env": "SLACK_MCP_CLI_BIN",

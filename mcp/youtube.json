@@ -3,14 +3,17 @@
   "title": "YouTube",
   "brand": "youtube",
   "description": "YouTube 채널·영상·분석 조회와 업로드",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "youtube-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "youtube-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-youtube-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "youtube-cli-{os}-{arch}",
+    "tag_prefix": "youtube-cli/",
     "binary": "youtube-cli"
   },
   "cli_bin_env": "YOUTUBE_MCP_CLI_BIN",

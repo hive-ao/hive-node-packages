@@ -3,14 +3,17 @@
   "title": "Code Quality",
   "brand": "",
   "description": "프로젝트 테스트 커버리지 보고서 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "quality-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "quality-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-quality-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "quality-cli-{os}-{arch}",
+    "tag_prefix": "quality-cli/",
     "binary": "quality-cli"
   },
   "cli_bin_env": "QUALITY_MCP_CLI_BIN",

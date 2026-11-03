@@ -3,14 +3,17 @@
   "title": "SonarQube",
   "brand": "sonarqube",
   "description": "SonarQube 프로젝트·품질 게이트 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "sonarqube-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "sonarqube-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-sonar-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "sonar-cli-{os}-{arch}",
+    "tag_prefix": "sonar-cli/",
     "binary": "sonar-cli"
   },
   "cli_bin_env": "SONARQUBE_MCP_CLI_BIN",

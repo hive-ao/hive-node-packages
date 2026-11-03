@@ -3,14 +3,17 @@
   "title": "Cloudflare",
   "brand": "cloudflare",
   "description": "Cloudflare 존·DNS·Workers·Pages 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "cloudflare-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "cloudflare-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-cloudflare-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "cloudflare-cli-{os}-{arch}",
+    "tag_prefix": "cloudflare-cli/",
     "binary": "cloudflare-cli"
   },
   "cli_bin_env": "CLOUDFLARE_MCP_CLI_BIN",

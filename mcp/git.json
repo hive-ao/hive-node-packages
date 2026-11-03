@@ -3,14 +3,17 @@
   "title": "Git",
   "brand": "git",
   "description": "이 PC의 git 저장소 조회·작업",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "git-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "git-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-git-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "git-cli-{os}-{arch}",
+    "tag_prefix": "git-cli/",
     "binary": "git-cli"
   },
   "cli_bin_env": "GIT_MCP_CLI_BIN",

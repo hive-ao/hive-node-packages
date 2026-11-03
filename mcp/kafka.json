@@ -3,14 +3,17 @@
   "title": "Kafka",
   "brand": "apachekafka",
   "description": "Kafka 클러스터·토픽·컨슈머 그룹 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "kafka-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "kafka-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-kafka-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "kafka-cli-{os}-{arch}",
+    "tag_prefix": "kafka-cli/",
     "binary": "kafka-cli"
   },
   "cli_bin_env": "KAFKA_MCP_CLI_BIN",

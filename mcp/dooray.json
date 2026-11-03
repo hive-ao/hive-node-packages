@@ -3,14 +3,17 @@
   "title": "Dooray",
   "brand": "",
   "description": "Dooray 프로젝트·업무·위키·메신저",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "dooray-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "dooray-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-dooray-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "dooray-cli-{os}-{arch}",
+    "tag_prefix": "dooray-cli/",
     "binary": "dooray-cli"
   },
   "cli_bin_env": "DOORAY_MCP_CLI_BIN",

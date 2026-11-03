@@ -3,14 +3,17 @@
   "title": "Grafana",
   "brand": "grafana",
   "description": "Grafana 대시보드·데이터소스·폴더 조회",
+  "version": 1,
   "mcp": {
-    "repo": "hive-ao/go-mcp-server",
+    "repo": "hive-ao/hive-releases",
     "asset": "grafana-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
     "binary": "grafana-mcp"
   },
   "cli": {
-    "repo": "hive-ao/go-grafana-cli",
+    "repo": "hive-ao/hive-releases",
     "asset": "grafana-cli-{os}-{arch}",
+    "tag_prefix": "grafana-cli/",
     "binary": "grafana-cli"
   },
   "cli_bin_env": "GRAFANA_MCP_CLI_BIN",
