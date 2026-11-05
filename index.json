@@ -20,6 +20,11 @@
       "version": 1
     },
     {
+      "name": "diskman",
+      "title": "Disk Manager",
+      "version": 1
+    },
+    {
       "name": "dooray",
       "title": "Dooray",
       "version": 2
@@ -67,6 +72,11 @@
     {
       "name": "sonarqube",
       "title": "SonarQube",
+      "version": 1
+    },
+    {
+      "name": "sshman",
+      "title": "SSH Manager",
       "version": 1
     },
     {

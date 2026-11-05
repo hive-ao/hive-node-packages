@@ -1,0 +1,32 @@
+{
+  "name": "sshman",
+  "title": "SSH Manager",
+  "brand": "",
+  "description": "SSH 호스트(~/.ssh/config)·터널 조회와 관리",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "sshman-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "sshman-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "sshman-{os}-{arch}",
+    "tag_prefix": "sshman/",
+    "binary": "sshman"
+  },
+  "cli_bin_env": "SSHMAN_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 자격증명이 없다 — 이 PC의 ~/.ssh/config와 SSH 키를 그대로 쓴다."
+  },
+  "verify": {
+    "args": [
+      "host",
+      "list",
+      "--agent"
+    ]
+  },
+  "guide": "준비물이 없다. 호스트는 ~/.ssh/config에 있으면 된다."
+}
