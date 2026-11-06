@@ -1,0 +1,32 @@
+{
+  "name": "docker",
+  "title": "Docker",
+  "brand": "docker",
+  "description": "이 PC의 Docker(compose 포함) 조회·작업",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "docker-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "docker-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "docker-cli-{os}-{arch}",
+    "tag_prefix": "docker-cli/",
+    "binary": "docker-cli"
+  },
+  "cli_bin_env": "DOCKER_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 것이 없다 — 이 PC의 docker를 그대로 쓴다. docker 경로가 PATH에 없으면 DOCKER_CLI_DOCKER_BIN으로 지정한다."
+  },
+  "verify": {
+    "args": [
+      "version",
+      "--agent",
+      "--json"
+    ]
+  },
+  "guide": "이 PC에 docker(compose 플러그인 포함)가 설치돼 있어야 한다. 위험한 툴은 ~/.config/hive-cli/allow.yaml(환경 변수 HIVE_CLI_ALLOW_FILE)에 허용 목록을 직접 적어야 열린다."
+}

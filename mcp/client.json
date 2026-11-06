@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "title": "Client",
+  "brand": "",
+  "description": "HTTP·TCP·UDP·TLS·DNS·WebSocket 네트워크 클라이언트(curl 대체)",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "client-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "client-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "client-cli-{os}-{arch}",
+    "tag_prefix": "client-cli/",
+    "binary": "client-cli"
+  },
+  "cli_bin_env": "CLIENT_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 것이 없다 — 인증 개념이 없고 요청마다 대상을 지정한다."
+  },
+  "guide": "준비물이 없다. 에이전트가 curl 대신 쓰는 네트워크 클라이언트다. 위험한 툴은 ~/.config/hive-cli/allow.yaml(환경 변수 HIVE_CLI_ALLOW_FILE)에 허용 목록을 직접 적어야 열린다."
+}

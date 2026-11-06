@@ -1,0 +1,32 @@
+{
+  "name": "terraform",
+  "title": "Terraform",
+  "brand": "terraform",
+  "description": "Terraform 실행(init·plan·apply 등)",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "terraform-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "terraform-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "terraform-cli-{os}-{arch}",
+    "tag_prefix": "terraform-cli/",
+    "binary": "terraform-cli"
+  },
+  "cli_bin_env": "TERRAFORM_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 것이 없다 — 이 PC의 terraform을 그대로 쓴다. 경로가 PATH에 없으면 TERRAFORM_CLI_BIN으로 지정한다. 공급자 인증(AWS_*·TF_VAR_* 등)은 MCP 서버 환경 변수로 넘긴다."
+  },
+  "verify": {
+    "args": [
+      "version",
+      "--agent",
+      "--json"
+    ]
+  },
+  "guide": "이 PC에 terraform 실행 파일이 설치돼 있어야 한다. 위험한 툴은 ~/.config/hive-cli/allow.yaml(환경 변수 HIVE_CLI_ALLOW_FILE)에 허용 목록을 직접 적어야 열린다."
+}

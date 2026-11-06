@@ -1,0 +1,25 @@
+{
+  "name": "sqlite",
+  "title": "SQLite",
+  "brand": "sqlite",
+  "description": "로컬 SQLite DB 파일 조회·실행",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "sqlite-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "sqlite-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "sqlite-cli-{os}-{arch}",
+    "tag_prefix": "sqlite-cli/",
+    "binary": "sqlite-cli"
+  },
+  "cli_bin_env": "SQLITE_MCP_CLI_BIN",
+  "configure": {
+    "method": "none",
+    "note": "설정할 것이 없다 — 툴을 부를 때 DB 파일 경로(--db)를 넘긴다."
+  },
+  "guide": "준비물이 없다. 로컬 SQLite 파일을 경로로 지정해 쓴다. 위험한 툴은 ~/.config/hive-cli/allow.yaml(환경 변수 HIVE_CLI_ALLOW_FILE)에 허용 목록을 직접 적어야 열린다."
+}

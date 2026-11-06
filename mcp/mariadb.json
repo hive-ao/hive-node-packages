@@ -1,0 +1,67 @@
+{
+  "name": "mariadb",
+  "title": "MariaDB",
+  "brand": "mariadb",
+  "description": "MariaDB 서버에 접속해 SQL 조회·실행",
+  "version": 1,
+  "mcp": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "mariadb-mcp-{os}-{arch}",
+    "tag_prefix": "mcp/",
+    "binary": "mariadb-mcp"
+  },
+  "cli": {
+    "repo": "hive-ao/hive-releases",
+    "asset": "mariadb-cli-{os}-{arch}",
+    "tag_prefix": "mariadb-cli/",
+    "binary": "mariadb-cli"
+  },
+  "cli_bin_env": "MARIADB_MCP_CLI_BIN",
+  "configure": {
+    "method": "env",
+    "fields": [
+      {
+        "key": "host",
+        "label": "호스트",
+        "kind": "text",
+        "env": "MARIADB_HOST",
+        "required": true,
+        "help": "접속할 MariaDB 서버 주소"
+      },
+      {
+        "key": "port",
+        "label": "포트",
+        "kind": "text",
+        "env": "MARIADB_PORT",
+        "required": false,
+        "help": "비우면 3306",
+        "default": "3306"
+      },
+      {
+        "key": "user",
+        "label": "사용자",
+        "kind": "text",
+        "env": "MARIADB_USER",
+        "required": true,
+        "help": "접속 계정"
+      },
+      {
+        "key": "password",
+        "label": "비밀번호",
+        "kind": "secret",
+        "env": "MARIADB_PASSWORD",
+        "required": true,
+        "help": "접속 계정의 비밀번호"
+      },
+      {
+        "key": "database",
+        "label": "데이터베이스",
+        "kind": "text",
+        "env": "MARIADB_DATABASE",
+        "required": false,
+        "help": "기본으로 쓸 데이터베이스 이름. 비워도 된다"
+      }
+    ]
+  },
+  "guide": "접속값(호스트·포트·사용자·비밀번호·데이터베이스)을 설정 폼에 넣으면 MCP 서버 환경 변수로 저장된다. 접속값을 바꾸면 이미 Claude에 등록한 프로필은 등록을 다시 해야 새 값이 쓰인다. 위험한 툴은 ~/.config/hive-cli/allow.yaml(환경 변수 HIVE_CLI_ALLOW_FILE)에 허용 목록을 직접 적어야 열린다."
+}

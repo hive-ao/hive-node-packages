@@ -15,6 +15,11 @@
       "version": 1
     },
     {
+      "name": "client",
+      "title": "Client",
+      "version": 1
+    },
+    {
       "name": "cloudflare",
       "title": "Cloudflare",
       "version": 1
@@ -22,6 +27,11 @@
     {
       "name": "diskman",
       "title": "Disk Manager",
+      "version": 1
+    },
+    {
+      "name": "docker",
+      "title": "Docker",
       "version": 1
     },
     {
@@ -60,6 +70,11 @@
       "version": 1
     },
     {
+      "name": "mariadb",
+      "title": "MariaDB",
+      "version": 1
+    },
+    {
       "name": "quality",
       "title": "Code Quality",
       "version": 1
@@ -75,8 +90,18 @@
       "version": 1
     },
     {
+      "name": "sqlite",
+      "title": "SQLite",
+      "version": 1
+    },
+    {
       "name": "sshman",
       "title": "SSH Manager",
+      "version": 1
+    },
+    {
+      "name": "terraform",
+      "title": "Terraform",
       "version": 1
     },
     {
