@@ -3,7 +3,7 @@
   "title": "YouTube",
   "brand": "youtube",
   "description": "YouTube 채널·영상·분석 조회와 업로드",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "youtube-mcp-{os}-{arch}",
@@ -18,38 +18,7 @@
   },
   "cli_bin_env": "YOUTUBE_MCP_CLI_BIN",
   "configure": {
-    "method": "init",
-    "profiles": true,
-    "config": "~/.youtube-cli/config.yaml",
-    "fields": [
-      {
-        "key": "client_secret_file",
-        "label": "OAuth 클라이언트(JSON)",
-        "kind": "file",
-        "required": true,
-        "help": "GCP의 데스크톱 앱 OAuth 클라이언트 JSON — 파일을 올리거나 내용을 붙여 넣는다",
-        "store": "~/.youtube-cli/client_secret.json"
-      }
-    ],
-    "init": {
-      "args": [
-        "config",
-        "init",
-        "--client-secret-file",
-        "{client_secret_file}"
-      ]
-    }
-  },
-  "verify": {
-    "args": [
-      "channel",
-      "view",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2
-    ]
+    "method": "standard"
   },
   "login": {
     "args": [

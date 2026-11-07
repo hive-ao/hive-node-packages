@@ -3,7 +3,7 @@
   "title": "Kafka",
   "brand": "apachekafka",
   "description": "Kafka 클러스터·토픽·컨슈머 그룹 조회",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "kafka-mcp-{os}-{arch}",
@@ -18,43 +18,7 @@
   },
   "cli_bin_env": "KAFKA_MCP_CLI_BIN",
   "configure": {
-    "method": "init",
-    "fields": [
-      {
-        "key": "bootstrap_servers",
-        "label": "브로커 주소",
-        "kind": "text",
-        "required": true,
-        "help": "쉼표로 구분 — host1:9092,host2:9092"
-      },
-      {
-        "key": "client_id",
-        "label": "클라이언트 ID(선택)",
-        "kind": "text"
-      }
-    ],
-    "init": {
-      "args": [
-        "config",
-        "init",
-        "--bootstrap-servers",
-        "{bootstrap_servers}"
-      ],
-      "optional_args": {
-        "client_id": [
-          "--client-id",
-          "{client_id}"
-        ]
-      }
-    }
-  },
-  "verify": {
-    "args": [
-      "cluster",
-      "info",
-      "--agent",
-      "--json"
-    ]
+    "method": "standard"
   },
   "guide": "Kafka 브로커(bootstrap) 주소만 있으면 된다. 인증 없는 클러스터가 전제다."
 }

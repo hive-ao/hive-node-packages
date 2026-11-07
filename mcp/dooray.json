@@ -3,7 +3,7 @@
   "title": "Dooray",
   "brand": "",
   "description": "Dooray 프로젝트·업무·위키·메신저",
-  "version": 2,
+  "version": 3,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "dooray-mcp-{os}-{arch}",
@@ -18,70 +18,7 @@
   },
   "cli_bin_env": "DOORAY_MCP_CLI_BIN",
   "configure": {
-    "method": "init",
-    "profiles": true,
-    "config": "~/.config/dooray-cli/config.yaml",
-    "fields": [
-      {
-        "key": "host",
-        "label": "API 주소",
-        "kind": "text",
-        "required": true,
-        "default": "https://api.dooray.com",
-        "help": "보통 https://api.dooray.com"
-      },
-      {
-        "key": "token",
-        "label": "API 토큰",
-        "kind": "secret",
-        "required": true,
-        "help": "형식 테넌트ID:토큰",
-        "env": "DOORAY_CLI_INIT_TOKEN"
-      },
-      {
-        "key": "admin_token",
-        "label": "Admin 토큰(선택)",
-        "kind": "secret",
-        "help": "회사(두레이 조직)당 하나 — 같은 회사 연결이 함께 쓴다. 회원 전체·조직 조회에만 쓴다.",
-        "env": "DOORAY_CLI_INIT_ADMIN_TOKEN"
-      }
-    ],
-    "init": {
-      "args": [
-        "config",
-        "init",
-        "--host",
-        "{host}"
-      ],
-      "env": {
-        "DOORAY_CLI_INIT_TOKEN": "token",
-        "DOORAY_CLI_INIT_ADMIN_TOKEN": "admin_token"
-      }
-    },
-    "list": {
-      "args": [
-        "config",
-        "profile",
-        "list",
-        "--json"
-      ],
-      "secrets": {
-        "admin_token": "admin"
-      }
-    },
-    "note": "토큰은 플래그가 아니라 환경 변수로 넘겨 프로세스 목록에 남기지 않는다. Admin 토큰은 회사(테넌트)별로 하나만 저장되고, 같은 회사의 연결 어디서 넣든 함께 쓴다."
-  },
-  "verify": {
-    "args": [
-      "member",
-      "me",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2,
-      3
-    ]
+    "method": "standard"
   },
   "guide": "Dooray API 토큰(테넌트ID:토큰)과 API 호스트(보통 https://api.dooray.com)를 넣는다. 계정은 연결 목록에서 여러 개 더할 수 있고, MCP 호출에서 프로필을 비우면 기본 계정을 쓴다. 회원 전체 조회까지 쓰려면 회사당 하나인 Admin 토큰을 넣는다."
 }

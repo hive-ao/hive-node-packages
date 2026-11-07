@@ -3,7 +3,7 @@
   "title": "Grafana",
   "brand": "grafana",
   "description": "Grafana 대시보드·데이터소스·폴더 조회",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "grafana-mcp-{os}-{arch}",
@@ -18,39 +18,7 @@
   },
   "cli_bin_env": "GRAFANA_MCP_CLI_BIN",
   "configure": {
-    "method": "yaml",
-    "fields": [
-      {
-        "key": "host",
-        "label": "Grafana 주소",
-        "kind": "text",
-        "required": true,
-        "help": "예: https://grafana.example.com"
-      },
-      {
-        "key": "token",
-        "label": "서비스 계정 토큰",
-        "kind": "secret",
-        "required": true
-      }
-    ],
-    "yaml": {
-      "path": "~/.grafana-cli/config.yaml",
-      "template": "default:\n  host: {host}\n  token: {token}\n"
-    },
-    "note": "grafana-cli config init은 토큰을 프로세스 인자로 받아 목록에 노출되므로, 설정 파일을 직접 쓴다."
-  },
-  "verify": {
-    "args": [
-      "folder",
-      "list",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2,
-      3
-    ]
+    "method": "standard"
   },
   "guide": "Grafana 주소와 서비스 계정 토큰. 이름이 Grafana 공식 grafana-cli(플러그인 도구)와 같아 PATH에서 공식 것이 먼저 잡힐 수 있다 — 하이브는 절대 경로를 넘겨 피한다."
 }

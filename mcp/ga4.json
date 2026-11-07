@@ -3,7 +3,7 @@
   "title": "Google Analytics(GA4)",
   "brand": "googleanalytics",
   "description": "GA4 속성·보고서 조회",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "ga4-mcp-{os}-{arch}",
@@ -18,45 +18,7 @@
   },
   "cli_bin_env": "GA4_MCP_CLI_BIN",
   "configure": {
-    "method": "init",
-    "fields": [
-      {
-        "key": "credentials_file",
-        "label": "서비스 계정 키(JSON)",
-        "kind": "file",
-        "required": true,
-        "help": "파일을 올리거나 내용을 붙여 넣는다 — 하이브가 0600으로 저장하고 그 절대 경로를 설정에 넣는다",
-        "store": "~/.ga4-cli/key.json"
-      },
-      {
-        "key": "property",
-        "label": "속성 ID",
-        "kind": "text",
-        "required": true,
-        "help": "123456789 또는 properties/123456789"
-      }
-    ],
-    "init": {
-      "args": [
-        "config",
-        "init",
-        "--credentials-file",
-        "{credentials_file}",
-        "--property",
-        "{property}"
-      ]
-    }
-  },
-  "verify": {
-    "args": [
-      "account",
-      "summaries",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2
-    ]
+    "method": "standard"
   },
   "guide": "GCP에서 Analytics Data·Admin API를 켜고 서비스 계정 키(JSON)를 발급한 뒤, GA4 속성에 그 서비스 계정 이메일을 뷰어로 추가한다. 키 JSON과 속성 ID를 넣는다."
 }

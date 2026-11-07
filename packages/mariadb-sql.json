@@ -1,19 +1,11 @@
 {
   "id": "mariadb-sql",
   "name": "MariaDB SQL",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "stage": "cd",
   "cli": "mariadb-cli",
   "path_label": "사용할 데이터베이스(선택)",
-  "path_hint": "비워 두면 MCP 서버 mariadb의 MARIADB_DATABASE를 쓴다. SQL은 노드 설정 code에 넣는다. 앞 ssh-tunnel 노드가 열었으면 그 host·port로 접속한다",
-  "mcp_server": "mariadb",
-  "mcp_env": [
-    "MARIADB_HOST",
-    "MARIADB_PORT",
-    "MARIADB_USER",
-    "MARIADB_PASSWORD",
-    "MARIADB_DATABASE"
-  ],
+  "path_hint": "비워 두면 하이브 MCP mariadb 연결 설정의 데이터베이스를 쓴다. SQL은 노드 설정 code에 넣는다. 앞 ssh-tunnel 노드가 열었으면 그 host·port로 접속한다",
   "ready": true,
   "state_from": [
     "status"

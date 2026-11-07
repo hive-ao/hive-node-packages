@@ -3,7 +3,7 @@
   "title": "GitLab",
   "brand": "gitlab",
   "description": "GitLab 프로젝트·이슈·MR 조회와 작업",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "gitlab-mcp-{os}-{arch}",
@@ -18,39 +18,7 @@
   },
   "cli_bin_env": "GITLAB_MCP_CLI_BIN",
   "configure": {
-    "method": "yaml",
-    "fields": [
-      {
-        "key": "host",
-        "label": "GitLab 주소",
-        "kind": "text",
-        "required": true,
-        "help": "예: https://gitlab.example.com"
-      },
-      {
-        "key": "token",
-        "label": "액세스 토큰(PAT)",
-        "kind": "secret",
-        "required": true,
-        "help": "GitLab › Access Tokens에서 발급 — 조회만이면 read_api, 쓰기까지면 api"
-      }
-    ],
-    "yaml": {
-      "path": "~/.gitlab-cli/config.yaml",
-      "template": "default:\n  host: {host}\n  token: {token}\n"
-    }
-  },
-  "verify": {
-    "args": [
-      "group",
-      "list",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2,
-      3
-    ]
+    "method": "standard"
   },
   "guide": "GitLab 웹 › Access Tokens에서 PAT를 발급한다(조회만이면 read_api, 쓰기까지면 api). GitLab 호스트 URL과 함께 넣는다."
 }

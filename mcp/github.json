@@ -3,7 +3,7 @@
   "title": "GitHub",
   "brand": "github",
   "description": "GitHub 저장소·이슈·PR 조회와 작업",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "github-mcp-{os}-{arch}",
@@ -18,33 +18,7 @@
   },
   "cli_bin_env": "GITHUB_MCP_CLI_BIN",
   "configure": {
-    "method": "yaml",
-    "fields": [
-      {
-        "key": "token",
-        "label": "액세스 토큰(PAT)",
-        "kind": "secret",
-        "required": true,
-        "help": "필요한 권한은 쓰려는 기능에 맞춰 정한다 — 저장소·이슈·PR",
-        "from_github": true
-      }
-    ],
-    "yaml": {
-      "path": "~/.github-cli/config.yaml",
-      "template": "default:\n  token: {token}\n"
-    }
-  },
-  "verify": {
-    "args": [
-      "repo",
-      "list",
-      "--agent",
-      "--json"
-    ],
-    "auth_exit_codes": [
-      2,
-      3
-    ]
+    "method": "standard"
   },
   "guide": "GitHub Personal Access Token 하나. 「GitHub 연동」에 넣은 토큰을 그대로 써도 된다(그 토큰이 이슈·저장소 권한을 갖고 있을 때)."
 }

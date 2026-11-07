@@ -4,7 +4,7 @@
       "id": "mariadb-sql",
       "name": "MariaDB SQL",
       "stage": "cd",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "cli": "mariadb-cli"
     }
   ],
@@ -12,7 +12,7 @@
     {
       "name": "aws",
       "title": "AWS",
-      "version": 1
+      "version": 2
     },
     {
       "name": "client",
@@ -22,12 +22,12 @@
     {
       "name": "cloudflare",
       "title": "Cloudflare",
-      "version": 1
+      "version": 2
     },
     {
       "name": "diskman",
       "title": "Disk Manager",
-      "version": 1
+      "version": 2
     },
     {
       "name": "docker",
@@ -37,12 +37,12 @@
     {
       "name": "dooray",
       "title": "Dooray",
-      "version": 2
+      "version": 3
     },
     {
       "name": "ga4",
       "title": "Google Analytics(GA4)",
-      "version": 1
+      "version": 2
     },
     {
       "name": "git",
@@ -52,27 +52,27 @@
     {
       "name": "github",
       "title": "GitHub",
-      "version": 1
+      "version": 2
     },
     {
       "name": "gitlab",
       "title": "GitLab",
-      "version": 1
+      "version": 2
     },
     {
       "name": "grafana",
       "title": "Grafana",
-      "version": 1
+      "version": 2
     },
     {
       "name": "kafka",
       "title": "Kafka",
-      "version": 1
+      "version": 2
     },
     {
       "name": "mariadb",
       "title": "MariaDB",
-      "version": 1
+      "version": 2
     },
     {
       "name": "quality",
@@ -82,12 +82,12 @@
     {
       "name": "slack",
       "title": "Slack",
-      "version": 1
+      "version": 2
     },
     {
       "name": "sonarqube",
       "title": "SonarQube",
-      "version": 1
+      "version": 2
     },
     {
       "name": "sqlite",
@@ -97,7 +97,7 @@
     {
       "name": "sshman",
       "title": "SSH Manager",
-      "version": 1
+      "version": 2
     },
     {
       "name": "terraform",
@@ -107,7 +107,7 @@
     {
       "name": "youtube",
       "title": "YouTube",
-      "version": 1
+      "version": 2
     }
   ]
 }

@@ -3,7 +3,7 @@
   "title": "Disk Manager",
   "brand": "",
   "description": "이 PC의 디스크·메모리 사용량 조회(읽기 전용)와 프로세스 종료",
-  "version": 1,
+  "version": 2,
   "mcp": {
     "repo": "hive-ao/hive-releases",
     "asset": "diskman-mcp-{os}-{arch}",
@@ -18,17 +18,7 @@
   },
   "cli_bin_env": "DISKMAN_MCP_CLI_BIN",
   "configure": {
-    "method": "none",
-    "note": "설정할 자격증명이 없다 — 이 PC의 디스크·메모리를 읽는다."
-  },
-  "verify": {
-    "args": [
-      "--agent",
-      "-d",
-      "1",
-      "--no-volume",
-      "/tmp"
-    ]
+    "method": "standard"
   },
   "guide": "준비물이 없다. 파일은 지우지 않는다 — 삭제는 사람에게 명령으로 넘긴다."
 }
